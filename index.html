@@ -2,7 +2,25 @@
 <head>
 
 <style type="text/css">
-/* put your CSS code here */
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px; 
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px; 
+}
 </style>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -15,9 +33,22 @@ $(document).ready(function() {
 </head>
 <body>
 
-<!-- put your HTML code here -->
-<p><b> A link </b><p>
-<p> <a href="http://www.nescaum.org">Check out nescaum!</a></p>
+<div id="header">
+<h1>City Gallery</h1>
+</div>
+
+<div id="nav">
+London<br>
+Paris<br>
+Tokyo<br>
+</div>
+
+<div id="section">
+<h1>Container For Map</h1>
+<p>
+This is a paragraph, but I'm aiming for a js container
+</p>
+</div>
 
 </body>
 </html>
