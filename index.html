@@ -1,6 +1,8 @@
 <html>
 <head>
 
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
 <style type="text/css">
 #header {
     background-color:black;
@@ -21,12 +23,19 @@
     float:left;
     padding:10px; 
 }
+
+#map { height: 180px; }
+
+
 </style>
 
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
   /* put your JavaScript code here */
+
+var map = L.map('map').setView([51.505, -0.09], 13);
 });
 </script>
 
@@ -44,10 +53,10 @@ Tokyo<br>
 </div>
 
 <div id="section">
+
 <h1>Container For Map</h1>
-<p>
-This is a paragraph, but I'm aiming for a js container
-</p>
+<div id="map"></div>
+
 </div>
 
 </body>
