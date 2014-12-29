@@ -36,7 +36,7 @@
 
 <link rel="stylesheet" href="leaflet.css" />
 <script type="text/javascript" src="leaflet.js"></script>
-<script src="SCounts.js" type="text/javascript"></script>
+<script type="text/javascript" src="SCounts.js"></script>
 
 <script type="text/javascript">
 /* put your JavaScript code here */
@@ -48,8 +48,17 @@
         }).addTo(map);
     };
 
+
+var countryStyle = {
+    'color': '#6495ED',
+    'weight': 5,
+    'opacity': 0.5
+};
+
 L.geoJson(SCounts, {
-    // other variables (not required)
+
+    style: countryStyle
+
 }).addTo(map);
 
 </script>
