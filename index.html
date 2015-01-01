@@ -36,17 +36,17 @@
 
 <link rel="stylesheet" href="leaflet.css" />
 <script type="text/javascript" src="leaflet.js"></script>
-<script type="text/javascript" src="SCounts.js"></script>
+<script type="text/javascript" src="necnts.js"></script>
 
 <script type="text/javascript">
 /* put your JavaScript code here */
 
-   window.onload = function () {
-      var map = L.map('map').setView([41.759033,-70.494156], 11);
-      L.tileLayer('http://{s}.tiles.mapbox.com/{id}/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    };
+window.onload = function () {
+    var map = L.map('map').setView([41.759033,-70.494156], 11);
+    L.tileLayer('http://{s}.tiles.mapbox.com/{id}/{z}/{x}/{y}.png', {
+        id: 'map example'  
+    }).addTo(map);
+};
 
 
 var countryStyle = {
@@ -55,10 +55,8 @@ var countryStyle = {
     'opacity': 0.5
 };
 
-L.geoJson(SCounts, {
-
+L.geoJson(sCounties, {
     style: countryStyle
-
 }).addTo(map);
 
 </script>
