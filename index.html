@@ -60,15 +60,18 @@ L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 };
 
 
-var countryStyle = {
-    'color': '#6495ED',
-    'weight': 5,
-    'opacity': 0.5
-};
+function style(feature) {
+     return{ 
+        fillColor: '#FEB24C',
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+     };
+}
 
-L.geoJson(sCounties, {
-    style: countryStyle
-}).addTo(map);
+L.geoJson(sCounties, {style: style}).addTo(map);
 
 </script>
 
