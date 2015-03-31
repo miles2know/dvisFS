@@ -40,7 +40,7 @@
 
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
-
+<script src="http://d3js.org/d3.v3.js"></script>
 
 <script type="text/javascript">
 /* put your JavaScript code here */
@@ -441,14 +441,15 @@ L.geoJson(sCounties, {style: style}).addTo(map);
   </g>
 </svg>
 
-<script> var ourdata = [[{"cond":"A","xvar":"-1.671956","yvar":"-6.912002"}],[{"cond":"A","xvar":" 2.392359","yvar":" 2.962316"}],[{"cond":"A","xvar":" 2.102135","yvar":" 5.590589"}],[{"cond":"A","xvar":"-2.150090","yvar":" 6.867006"}],[{"cond":"A","xvar":" 4.866461","yvar":" 4.057588"}],[{"cond":"A","xvar":" 5.540415","yvar":" 5.833821"}],[{"cond":"A","xvar":" 2.657975","yvar":" 7.233106"}],[{"cond":"A","xvar":" 5.566354","yvar":" 5.097083"}],[{"cond":"A","xvar":" 8.356644","yvar":" 5.802185"}],[{"cond":"A","xvar":" 8.476552","yvar":" 5.811106"}],[{"cond":"B","xvar":" 7.910562","yvar":"10.224007"}],[{"cond":"B","xvar":"10.723323","yvar":"11.650710"}],[{"cond":"B","xvar":"18.323823","yvar":" 6.169130"}],[{"cond":"B","xvar":"14.196482","yvar":"11.184388"}],[{"cond":"B","xvar":"14.146333","yvar":"15.700704"}],[{"cond":"B","xvar":"15.246630","yvar":"11.455242"}],[{"cond":"B","xvar":"17.998087","yvar":"17.099775"}],[{"cond":"B","xvar":"16.926911","yvar":"14.075303"}],[{"cond":"B","xvar":"21.966464","yvar":"22.454589"}],[{"cond":"B","xvar":"17.962302","yvar":"20.468708"}]]; 
+<script> ourdata = [[{"cond":"A","xvar":"-1.671956","yvar":"-6.912002"}],[{"cond":"A","xvar":" 2.392359","yvar":" 2.962316"}],[{"cond":"A","xvar":" 2.102135","yvar":" 5.590589"}],[{"cond":"A","xvar":"-2.150090","yvar":" 6.867006"}],[{"cond":"A","xvar":" 4.866461","yvar":" 4.057588"}],[{"cond":"A","xvar":" 5.540415","yvar":" 5.833821"}],[{"cond":"A","xvar":" 2.657975","yvar":" 7.233106"}],[{"cond":"A","xvar":" 5.566354","yvar":" 5.097083"}],[{"cond":"A","xvar":" 8.356644","yvar":" 5.802185"}],[{"cond":"A","xvar":" 8.476552","yvar":" 5.811106"}],[{"cond":"B","xvar":" 7.910562","yvar":"10.224007"}],[{"cond":"B","xvar":"10.723323","yvar":"11.650710"}],[{"cond":"B","xvar":"18.323823","yvar":" 6.169130"}],[{"cond":"B","xvar":"14.196482","yvar":"11.184388"}],[{"cond":"B","xvar":"14.146333","yvar":"15.700704"}],[{"cond":"B","xvar":"15.246630","yvar":"11.455242"}],[{"cond":"B","xvar":"17.998087","yvar":"17.099775"}],[{"cond":"B","xvar":"16.926911","yvar":"14.075303"}],[{"cond":"B","xvar":"21.966464","yvar":"22.454589"}],[{"cond":"B","xvar":"17.962302","yvar":"20.468708"}]] </script> 
 
-dataToBind =  d3.entries(ourdata.map(function(d,i) {return d[0]})); 
-
-scatterPoints = d3.select(".points").selectAll("use");
-scatterPoints.data(dataToBind);
+<script> dataToBind =  d3.entries(ourdata.map(function(d,i) {return d[0]})) </script>
 
 
+<script> scatterPoints = d3.select(".points").selectAll("use");
+scatterPoints.data(dataToBind) </script>
+
+<script>
  scatterPoints  
     .on("mouseover", function(d) {      
       //Create the tooltip label
@@ -489,8 +490,7 @@ scatterPoints.data(dataToBind);
     })              
     .on("mouseout", function(d) {       
         d3.select("#tooltip").remove();  
-    }); 
-</script>
+    }); </script>
 
 
 </div>
