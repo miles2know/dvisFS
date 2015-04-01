@@ -17,14 +17,14 @@
     float:left;
     padding:5px; 
 }
-#section {
+section {
     min-width:350px;
     float:left;
     padding:10px; 
 }
 
 #map {
-     min-width: 600px;
+     min-width: 350px;
      min-height: 375px;
 }
 
@@ -101,15 +101,16 @@ L.geoJson(sCounties, {style: style}).addTo(map);
 
 </div>
 
-<div id="section">
+<section>
 
 <h1>Container For the Map </h1>
 <p> The point of this whole thing was to embed a javascript map <i>leaflet</i> into html from scratch. The technicalities of how the goal was described don't matter - Needless to say it's been a useful exercise. So to an earlier conversation I had with a friend on using the word engendered in technical writing. What if I said "It's been a useful maneuver"? It totally works, but just sounds silly.<p/>
 <div id="map"></div>
 
-</div>
+</section>
 
-<div id="section">
+<section>
+<h1> Container For A Plot</h1>
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400px" height="480px" viewBox="0 0 278 480" version="1.1">
   <metadata xmlns:gridsvg="http://www.stat.auckland.ac.nz/~paul/R/gridSVG/">
@@ -493,7 +494,7 @@ scatterPoints.data(dataToBind) </script>
     }); </script>
 
 
-</div>
+</section>
 
 </body>
 </html>
